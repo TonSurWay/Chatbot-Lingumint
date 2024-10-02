@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingumint</title>
+    <link rel="stylesheet" href="css/conversation.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="icon" href="img/logoLingumint.webp">
+</head>
+<body>
+    <header> <!--Header-->
+        <nav>
+            <div class="nav-con">
+                <div class="logo">
+                    <a href="index.html"><p>Lingumint</p></a>
+                </div>
+                    <ul class="menu">
+                            
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="conversation.html">Conversation </a></li>
+                        <li><a href="evaluation.html">Evaluation </a></li>
+                        <li><a href="#">Progress</a></li>
+                    </ul>
+                    
+                    <div class="login-btn" id="login-btn" onclick="LoginForm()">
+                        <button  type="submit" > Login </button>
+                    </div>
+                    <div id="user-profile"
+                    class="user-profile">
+                       <a href="UserProfile.html"><i class="fa-regular fa-user"></i></a> 
+                    </div>
+
+            </div> <!--End of nav-con-->
+        </nav>
+    </header> <!--End of Header-->
+
+    <section class="conver-con">
+        <div class="history-con">
+            <div class="history-title">
+                <h3>History</h3>
+            </div>
+            <button id="addnew-page" class="addnew-page" type="submit"><i class="fa-solid fa-plus "></i>Add new Page</button>
+            <ul id="chat-room-list" class="chat-room-list">
+                <!-- Chat rooms will be dynamically generated here -->
+            </ul> 
+        </div>
+    
+        <div class="chat-con" >
+            <div class="display-box" id="display-box"></div>
+    
+            <form id="chat-form" class="chat-form">
+                <button id="clip" class="clip" type="button"><i class="fa-solid fa-paperclip fa-rotate-by"
+                        style="--fa-rotate-angle: -45deg;"></i></button>
+    
+                <hr>
+                <input id="message-input" type="text" placeholder="Send message..." required>
+    
+                <button id="send" class="send" type="submit"><i class="fa-regular fa-location-arrow fa-rotate-by"
+                        style="--fa-rotate-angle: 45deg;"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/login.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

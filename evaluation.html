@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingumint</title>
+    <link rel="stylesheet" href="css/evaluation.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="icon" href="img/logoLingumint.webp">
+</head>
+<body>
+    <header> <!--Header-->
+        <nav>
+            <div class="nav-con">
+                <div class="logo">
+                    <a href="index.html"><p>Lingumint</p></a>
+                </div>
+                    <ul class="menu">
+                            
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="conversation.html">Conversation </a></li>
+                        <li><a href="evaluation.html">Evaluation </a></li>
+                        <li><a href="#">Progress</a></li>
+                    </ul>
+                    
+                    <div class="login-btn" id="login-btn" onclick="LoginForm()">
+                        <button  type="submit" > Login </button>
+                    </div>
+                    <div id="user-profile"
+                    class="user-profile">
+                       <a href="UserProfile.html"><i class="fa-regular fa-user"></i></a> 
+                    </div>
+
+            </div> <!--End of nav-con-->
+        </nav>
+    </header> <!--End of Header-->
+
+    <section>
+        <form action="" id="evaluation-box" class="evaluation-box">
+            <h2>Evaluation</h2>
+
+            <div class="rate-score">
+                <button id="rate1" type="button" value="1">1</button>
+                <button id="rate2" type="button" value="2">2</button>
+                <button id="rate3" type="button" value="3">3</button>
+                <button id="rate4" type="button" value="4">4</button>
+                <button id="rate5" type="button" value="5">5</button>
+            </div>
+
+            <textarea type="text" class="feedback" id="feedback" placeholder="Enter text" rows="5" cols="50"></textarea>
+        
+            <button type="button" id="sending" class="sending">Send</button>
+
+            <div id="overlay" class="overlay"></div>
+
+            <div id="showpopup" class="showpopup">
+                <span>Thank you!</span>
+                <span>Thanks for submittings your  Evaluation </span>
+                <span>have a good day </span>
+                <img class="smile" src="img/Smile.svg" alt="">
+
+                <button id="close-popup" class="close-popup" type="submit">OK</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="js/login.js"></script>
+    <script src="js/evaluation.js"></script>
+</body>
+</html>
