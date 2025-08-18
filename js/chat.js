@@ -199,7 +199,6 @@ function generateAutoReply(userMessage) {
     }
     else{
         return responses[Math.floor(Math.random() * responses.length)]; // Random reply
-
     }
 }
 

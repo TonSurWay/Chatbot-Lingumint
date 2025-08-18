@@ -33,6 +33,7 @@ nav {
 }
 
 .logo {
+    z-index: 999;
     display: flex;
     font-size: 40px;
     font-weight: 700;
@@ -98,6 +99,7 @@ nav {
     border-radius: 100%;
     width: 42px;
     height: 42px;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;

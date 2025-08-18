@@ -30,21 +30,57 @@ function logoutUser() {
 
 // Function to update the UI based on login status
 function updateUI() {
-
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     const loginBtn = document.getElementById('login-btn');
     const userProfile = document.getElementById('user-profile');
+    const loginDropdown = document.getElementById('login-dropdown');
+    const userDropdown = document.getElementById('user-dropdown');
+    const isSmallScreen = window.matchMedia("(max-width: 1024px)").matches;
 
-
-    if (loggedInUser) {
-        // Hide the login button and show the user profile icon
+    if (isSmallScreen && loggedInUser) {
+        loginBtn.style.display = 'none';
+        userProfile.style.display = 'none';
+        loginDropdown.style.display = 'none';
+        userDropdown.style.display = 'flex';
+    } 
+    else if (isSmallScreen && !loggedInUser){
+        loginBtn.style.display = 'none';
+        userProfile.style.display = 'none';
+        loginDropdown.style.display = 'flex';
+        userDropdown.style.display = 'none';
+    }  
+    else  if (loggedInUser) {
         loginBtn.style.display = 'none';
         userProfile.style.display = 'flex';
+        loginDropdown.style.display = 'none';
+        userDropdown.style.display = 'flex';
     } else {
-        // Show the login button and hide the user profile icon
         loginBtn.style.display = 'flex';
         userProfile.style.display = 'none';
-    }
+        loginDropdown.style.display = 'flex';
+        userDropdown.style.display = 'none';
+        }
+    
+}
+
+
+// Initial call and attach resize event
+// updateUI();
+window.addEventListener("resize", updateUI);
+
+
+function ToggleDropdown(){
+    const side = document.getElementById('dropdown');
+
+    side.style.display = 'flex';
+}
+
+
+function CloseDropdown(){
+    const side = document.getElementById('dropdown');
+
+    side.style.display = 'none';
+
 }
 
 
@@ -69,6 +105,8 @@ function LoginForm(){
 }
 
 
+document.getElementById('close-dropdown').addEventListener('click', CloseDropdown);
+document.getElementById('open-dropdown').addEventListener('click', ToggleDropdown);
 
     
 

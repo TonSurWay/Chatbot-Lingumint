@@ -30,6 +30,7 @@ nav{
     padding: 10px 60px;
 }
 .logo{
+    z-index: 100;
     display: flex;
     font-size: 40px;
     font-weight: 700;
@@ -93,6 +94,7 @@ nav{
     border-radius: 100%;
     width: 42px;
     height: 42px;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -195,7 +197,7 @@ nav{
         background-color: #ffffff;
         position: relative;
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-        overflow-x: scroll ;
+        overflow-x: scroll;
 
         & .message {
             margin: 1.3rem 0;
